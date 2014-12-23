@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PopulationModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PopulationModelStoreContainer">
+    <EntitySet Name="StateArea" EntityType="PopulationModel.Store.StateArea" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="StateArea">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="Statename" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Area" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+</Schema>
